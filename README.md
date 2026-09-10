@@ -1,9 +1,9 @@
-# Sāmwaad — Marketing Website
+# Sāmwaad — iOS Application
 
-Marketing site for **Sāmwaad**, an iOS accessibility app that turns spoken conversation into live, speaker-identified captions with AI-generated summaries. Built for people with hearing impairments (ANSD — Auditory Neuropathy Spectrum Disorder).
+**Sāmwaad** is an iOS accessibility app that turns spoken conversation into live, speaker-identified captions with AI-generated summaries. Built for people with hearing impairments (ANSD — Auditory Neuropathy Spectrum Disorder).
 
-🌐 **Live site:** [samwaad-app.netlify.app](https://samwaad-app.netlify.app)  
-📱 **TestFlight beta:** [testflight.apple.com/join/hyKHQQgu](https://testflight.apple.com/join/hyKHQQgu)
+**Live site:** [samwaad-app.netlify.app](https://samwaad-app.netlify.app)  
+**TestFlight beta:** [testflight.apple.com/join/hyKHQQgu](https://testflight.apple.com/join/hyKHQQgu)
 
 ---
 
