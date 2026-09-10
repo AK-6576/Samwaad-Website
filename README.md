@@ -60,5 +60,5 @@ Samwaad-Website/
 
 ## Contact
 
-📧 [samwaad.connect@gmail.com](mailto:samwaad.connect@gmail.com)
+[samwaad.connect@gmail.com](mailto:samwaad.connect@gmail.com)
 
