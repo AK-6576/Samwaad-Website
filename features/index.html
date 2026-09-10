@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Features — Sāmwaad</title>
+<meta name="description" content="An in-depth look at Sāmwaad's core features: Quick Captioning, Group Conversations, Quick Actions, and View Conversations.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 22'%3E%3Crect x='0' y='12' width='4' height='10' rx='1' fill='%2316213e'/%3E%3Crect x='7' y='4' width='4' height='18' rx='1' fill='%2316213e'/%3E%3Crect x='14' y='0' width='4' height='22' rx='1' fill='%2316213e'/%3E%3Crect x='21' y='8' width='4' height='14' rx='1' fill='%2316213e'/%3E%3Crect x='28' y='14' width='4' height='8' rx='1' fill='%2316213e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="wordmark" href="/">
+      <svg class="waveform" width="34" height="22" viewBox="0 0 34 22" aria-hidden="true">
+        <rect x="0" y="12" width="4" height="10" rx="1" fill="var(--teal-bar-1)"/>
+        <rect x="7" y="4" width="4" height="18" rx="1" fill="var(--teal-bar-2)"/>
+        <rect x="14" y="0" width="4" height="22" rx="1" fill="var(--teal-bar-3)"/>
+        <rect x="21" y="8" width="4" height="14" rx="1" fill="var(--teal-bar-2)"/>
+        <rect x="28" y="14" width="4" height="8" rx="1" fill="var(--teal-bar-1)"/>
+      </svg>
+      Sāmwaad
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/team">Team</a>
+      <a href="/features" aria-current="page">Features</a>
+      <a href="/support">Support</a>
+      <a href="/privacy-policy">Privacy policy</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="hero__eyebrow">In depth</p>
+  <h1>Everything Sāmwaad does</h1>
+  <div class="page-intro">
+    <p>Four core pieces work together: live captioning, group sessions, scheduled check-ins, and a searchable history. Each one below includes what it does, why it matters, and how it's built.</p>
+  </div>
+</section>
+
+<div class="lp-section">
+  <div class="tabs">
+    <div class="tabs__nav" role="tablist" aria-label="Sāmwaad features">
+      <button class="tabs__btn" role="tab" id="tab-qc" aria-controls="panel-qc" aria-selected="true">Quick Captioning</button>
+      <button class="tabs__btn" role="tab" id="tab-group" aria-controls="panel-group" aria-selected="false" tabindex="-1">Group Conversations</button>
+      <button class="tabs__btn" role="tab" id="tab-actions" aria-controls="panel-actions" aria-selected="false" tabindex="-1">Quick Actions</button>
+      <button class="tabs__btn" role="tab" id="tab-history" aria-controls="panel-history" aria-selected="false" tabindex="-1">View Conversations</button>
+    </div>
+
+    <div class="tabs__panels">
+
+      <div class="tabs__panel" id="panel-qc" role="tabpanel" aria-labelledby="tab-qc">
+        <div class="tour">
+          <div class="tour__shots">
+            <div class="tour__shot">
+              <img src="/assets/screenshots/home.png" alt="Home screen with the Quick Captioning card" width="700" height="1521" loading="lazy">
+              <p>Start in one tap</p>
+            </div>
+            <div class="tour__shot">
+              <img src="/assets/screenshots/summary.png" alt="Conversation summary with participant notes" width="700" height="1521" loading="lazy">
+              <p>Get an instant summary</p>
+            </div>
+          </div>
+          <div class="tour__text">
+            <h3>Quick Captioning</h3>
+            <p>One tap turns spoken conversation into live, readable captions — color-coded by speaker, updating in real time as people talk.</p>
+            <ul>
+              <li>Real-time speech-to-text via Apple's on-device Speech framework</li>
+              <li>Speaker-aware, color-coded caption bubbles</li>
+              <li>Wraps up into an AI-generated summary automatically</li>
+            </ul>
+            <div class="tech-note">
+              <strong>Under the hood:</strong>
+              <ul>
+                <li>Captioning runs on Apple's on-device <code>SFSpeechRecognizer</code>.</li>
+                <li>Speaker identification uses a custom CoreML model that extracts a voice embedding and matches it against stored profiles via cosine similarity.</li>
+                <li>Profiles adapt over time through rolling-average updates.</li>
+                <li>A retroactive "Time Machine" correction engine can re-classify earlier segments if a speaker is renamed.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs__panel" id="panel-group" role="tabpanel" aria-labelledby="tab-group" hidden>
+        <div class="tour">
+          <div class="tour__shots">
+            <div class="tour__shot">
+              <img src="/assets/screenshots/room-code.png" alt="Room code screen for a new group session" width="700" height="1521" loading="lazy">
+              <p>New — create &amp; share a code</p>
+            </div>
+            <div class="tour__shot">
+              <img src="/assets/screenshots/join-conversation.png" alt="Join conversation dialog for entering a room code" width="700" height="1521" loading="lazy">
+              <p>Join — enter a code</p>
+            </div>
+          </div>
+          <div class="tour__text">
+            <h3>Group Conversations</h3>
+            <p>Bring more than one person into a session. Create a room and share a short code, or join one that's already running — captions sync live for everyone.</p>
+            <ul>
+              <li>Instant room codes — no accounts required to join</li>
+              <li>Captions and summaries sync across every participant</li>
+              <li>Built for classrooms, meetings, and family conversations</li>
+            </ul>
+            <div class="tech-note">
+              <strong>Under the hood:</strong>
+              <ul>
+                <li>Sessions sync through Firebase Realtime Database.</li>
+                <li>Each room is identified by a short, auto-generated code.</li>
+                <li>Messages and presence update live for every participant connected to that room.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs__panel" id="panel-actions" role="tabpanel" aria-labelledby="tab-actions" hidden>
+        <div class="tour">
+          <div class="tour__shots">
+            <div class="tour__shot">
+              <img src="/assets/screenshots/quick-action-days.png" alt="Selecting recurring days for a quick action" width="700" height="1521" loading="lazy">
+              <p>Pick the schedule</p>
+            </div>
+            <div class="tour__shot">
+              <img src="/assets/screenshots/quick-action.png" alt="A scheduled quick action set to Mon, Wed, Fri under Office" width="700" height="1521" loading="lazy">
+              <p>Set and forget</p>
+            </div>
+          </div>
+          <div class="tour__text">
+            <h3>Quick Actions</h3>
+            <p>Recurring conversations don't need setting up from scratch every time. Choose participants, a start time, the days it repeats, and a category once — Sāmwaad handles the reminders.</p>
+            <ul>
+              <li>Repeats on custom days — e.g. Mon / Wed / Fri</li>
+              <li>Organized by category — Office, Family, Friends</li>
+              <li>Local notifications ahead of each scheduled session</li>
+            </ul>
+            <div class="tech-note">
+              <strong>Under the hood:</strong>
+              <ul>
+                <li>Quick actions are stored locally and scheduled with iOS local notifications ahead of each session.</li>
+                <li>Cross-device presence is synced through Firebase so status stays current wherever you check it.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs__panel" id="panel-history" role="tabpanel" aria-labelledby="tab-history" hidden>
+        <div class="tour">
+          <div class="tour__shots">
+            <div class="tour__shot">
+              <img src="/assets/screenshots/view-conversations.png" alt="List of saved conversations" width="700" height="1521" loading="lazy">
+              <p>Browse your history</p>
+            </div>
+            <div class="tour__shot">
+              <img src="/assets/screenshots/summary.png" alt="Reopened conversation showing chat and summary tabs" width="700" height="1521" loading="lazy">
+              <p>Reopen any session</p>
+            </div>
+          </div>
+          <div class="tour__text">
+            <h3>View Conversations</h3>
+            <p>Every session is saved automatically. Browse your history at a glance, then reopen any conversation to replay the transcript or revisit its AI summary.</p>
+            <ul>
+              <li>Full transcript and AI summary saved per session</li>
+              <li>History organized by date</li>
+              <li>Export any summary as a PDF to share</li>
+            </ul>
+            <div class="tech-note">
+              <strong>Under the hood:</strong>
+              <ul>
+                <li>Conversations, messages, and voice profiles persist locally via SwiftData.</li>
+                <li>Post-session summaries use on-device Apple Intelligence (Foundation Models) where supported.</li>
+                <li>Any summary can be exported as a PDF and shared through the iOS share sheet.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="lp-section cta-band" id="get-started">
+  <div class="contact-strip__box">
+    <span class="badge">Coming soon to the App Store</span>
+    <h2>Try Sāmwaad today, on TestFlight</h2>
+    <p>We're in beta ahead of our full App Store release — join the TestFlight beta to try Sāmwaad now.</p>
+    <a class="btn btn-primary" href="https://testflight.apple.com/join/hyKHQQgu">Join the TestFlight beta</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>© 2026 Team Sāmwaad. All rights reserved.</span>
+    <a href="mailto:samwaad.connect@gmail.com">samwaad.connect@gmail.com</a>
+  </div>
+</footer>
+
+<script src="/assets/tabs.js" defer></script>
+</body>
+</html>

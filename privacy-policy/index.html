@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Sāmwaad</title>
+<meta name="description" content="How Sāmwaad collects, processes, and protects your data — including on-device audio processing, voice calibration, and account information.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 22'%3E%3Crect x='0' y='12' width='4' height='10' rx='1' fill='%2316213e'/%3E%3Crect x='7' y='4' width='4' height='18' rx='1' fill='%2316213e'/%3E%3Crect x='14' y='0' width='4' height='22' rx='1' fill='%2316213e'/%3E%3Crect x='21' y='8' width='4' height='14' rx='1' fill='%2316213e'/%3E%3Crect x='28' y='14' width='4' height='8' rx='1' fill='%2316213e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="wordmark" href="/">
+      <svg class="waveform" width="34" height="22" viewBox="0 0 34 22" aria-hidden="true">
+        <rect x="0" y="12" width="4" height="10" rx="1" fill="var(--teal-bar-1)"/>
+        <rect x="7" y="4" width="4" height="18" rx="1" fill="var(--teal-bar-2)"/>
+        <rect x="14" y="0" width="4" height="22" rx="1" fill="var(--teal-bar-3)"/>
+        <rect x="21" y="8" width="4" height="14" rx="1" fill="var(--teal-bar-2)"/>
+        <rect x="28" y="14" width="4" height="8" rx="1" fill="var(--teal-bar-1)"/>
+      </svg>
+      Sāmwaad
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/team">Team</a>
+      <a href="/features">Features</a>
+      <a href="/support">Support</a>
+      <a href="/privacy-policy" aria-current="page">Privacy policy</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="hero__eyebrow">Privacy policy</p>
+  <h1>Your privacy in Sāmwaad</h1>
+  <p>This explains what Sāmwaad collects, how it's used, and how you can control or delete it.</p>
+  <p class="hero__meta">Last updated: September 2, 2026</p>
+</section>
+
+<div class="page-body page-body--with-toc">
+
+  <nav class="toc" aria-label="Sections on this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#what-we-collect">What we collect</a></li>
+      <li><a href="#on-device">On-device &amp; Apple Intelligence</a></li>
+      <li><a href="#third-party">Third-party services</a></li>
+      <li><a href="#retention">Retention &amp; deletion</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <div class="prose">
+
+    <details class="toc-mobile">
+      <summary>On this page</summary>
+      <ol>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#what-we-collect">What we collect</a></li>
+        <li><a href="#on-device">On-device &amp; Apple Intelligence</a></li>
+        <li><a href="#third-party">Third-party services</a></li>
+        <li><a href="#retention">Retention &amp; deletion</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </details>
+
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>Sāmwaad is built so that your voice stays on your device wherever possible.</p>
+      <ul>
+        <li><strong>On-device audio processing.</strong> Voice audio captured for live captioning and speaker calibration is processed locally, in memory. We never stream, record, or upload raw audio to a server.</li>
+        <li><strong>On-device speaker recognition.</strong> A local model (VL1004) computes anonymous voice embeddings directly on your device's hardware.</li>
+        <li><strong>Encrypted sync.</strong> Group session transcripts synced to our cloud database are encrypted on your device (AES-256) before they're sent.</li>
+        <li><strong>No ad tracking.</strong> We don't sell your data, show third-party ads, or track you across other apps or websites.</li>
+      </ul>
+    </section>
+
+    <section id="what-we-collect">
+      <h2>What we collect and how it's used</h2>
+
+      <h3>Microphone &amp; spoken audio</h3>
+      <p>Used to power live captioning and on-device speaker identification. Audio is buffered briefly in memory to run Apple's speech recognizer and our local model, then discarded — it's never saved to disk or uploaded.</p>
+
+      <h3>Voice calibration profile</h3>
+      <p>Calibration extracts a numerical voice embedding representing your vocal characteristics, stored locally in your device's private storage. You can delete or redo this at any time in <strong>Settings → Vocal Profile</strong>.</p>
+
+      <h3>Account information</h3>
+      <p>If you create an account, we collect your email and authentication credentials via Firebase Authentication or Google Sign-In, used to manage your identity and sync sessions across devices.</p>
+
+      <h3>Group sessions &amp; transcripts</h3>
+      <p>Text transcripts, participant names, action items, and session summaries. Synced data is protected with AES-256 client-side encryption — the keys live in your device's Keychain and are never accessible to us in plain text. A local copy is also kept on-device for offline review.</p>
+
+      <h3>Location (optional)</h3>
+      <p>If you enable it, Sāmwaad uses reverse geocoding to add a city or venue name to auto-generated summaries. This only runs during an active session, and only with "While Using the App" permission.</p>
+    </section>
+
+    <section id="on-device">
+      <h2>On-device &amp; Apple Intelligence</h2>
+      <p>On supported hardware, Sāmwaad uses on-device Apple Intelligence (Foundation Models) to generate post-session summaries, action items, and notes. All of this runs on your device — conversation transcripts are never sent to an external AI service to produce these summaries.</p>
+    </section>
+
+    <section id="third-party">
+      <h2>Third-party services</h2>
+      <p>Sāmwaad relies on a small set of trusted frameworks:</p>
+      <ul>
+        <li><strong>Apple Speech framework &amp; CoreML</strong> — on-device speech recognition and voice processing, governed by Apple.</li>
+        <li><strong>Firebase Authentication &amp; Realtime Database (Google)</strong> — account login and encrypted group-session sync, governed by <a href="https://cloud.google.com/terms/cloud-privacy-notice">Google's Cloud Privacy Notice</a>.</li>
+      </ul>
+      <p>We don't use third-party advertising SDKs or trackers.</p>
+    </section>
+
+    <section id="retention">
+      <h2>Retention &amp; your controls</h2>
+      <p>You're in control of your data at all times:</p>
+      <ul>
+        <li><strong>Delete your voice profile</strong> under Profile → Vocal Profile → Delete Profile.</li>
+        <li><strong>Clear conversation history</strong> from the View Conversations screen at any time.</li>
+        <li><strong>Delete your account</strong> from Profile → Delete Account, or by contacting support. This immediately and permanently removes your authentication record, cloud data, and local records on your device.</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <h2>Children's privacy</h2>
+      <p>Sāmwaad does not knowingly collect or solicit personal information from children under the age of 13.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact us</h2>
+      <p>Questions, feedback, or a data request? Reach the team:</p>
+      <ul>
+        <li>Email: <a href="mailto:samwaad.connect@gmail.com">samwaad.connect@gmail.com</a></li>
+        <li>Project: Team Sāmwaad</li>
+        <li>Repository: <a href="https://github.com/AK-6576/Samwaad">github.com/AK-6576/Samwaad</a></li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>© 2026 Team Sāmwaad. All rights reserved.</span>
+    <a href="/support">Support</a>
+  </div>
+</footer>
+
+</body>
+</html>
